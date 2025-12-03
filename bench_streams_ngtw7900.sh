@@ -1,5 +1,8 @@
 set -u
 
+# === Compile ===
+/opt/rocm-7.1.0/bin/hipcc --offload-arch="gfx1100" stream_test.cpp -o stream_test_ngtw7900_newdriver
+
 # === Config ===
 HIP_BIN=./stream_test_ngtw7900_newdriver
 OUT_CSV=results_hwq_streams_ngtw7900_newdriver_rocm7-1-0_1000kl_10r.csv
